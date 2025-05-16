@@ -50,7 +50,7 @@
 //method 2:-
 
 const Recipes = require("../models/recipe");
-const EditRecipes = require("../models/editRecipes"); // Capitalized for convention
+const EditRecipes = require("../models/user"); // Capitalized for convention
 
 const getRecipes = async (req, res) => {
     const recipes = await Recipes.find();

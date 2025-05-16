@@ -22,23 +22,16 @@
 
 const mongoose = require('mongoose');
 
-const editedSchema = new mongoose.Schema({
-    title: {
+const userSchema = new mongoose.Schema({
+    email: {
         type: String,
-        required: true
+        required: true,
+        unique:true
     },
-    editedIngredients: {
-        type: String,
-        required: true
-    },
-    editInstructions: {
-        type: String,
-        required: true
-    },
-    editTime: {
+    password: {
         type: String,
         required: true
     }
-});
+},{timestamps:true});
 
-module.exports = mongoose.model("editRecipes", editedSchema);
+module.exports = mongoose.model("User", userSchema);
